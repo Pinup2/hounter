@@ -78,3 +78,17 @@ document.querySelectorAll(".artikel-wrapper__mini-cart").forEach((card) => {
     updateFeaturedArticle(imgSrc, authorImgSrc, authorName, title, description);
   });
 });
+
+//form behaviour
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Assuming validation is passed
+    const formData = new FormData(this);
+    console.log("Form data:", ...formData.entries());
+
+    // Here you would typically send the data to a server
+    // Example: axios.post('/api/submit-form', formData)
+  });
