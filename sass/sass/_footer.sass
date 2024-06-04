@@ -1,0 +1,61 @@
+/* ------------------------------ footer*/
+.footer
+    padding: 60px 0 30px
+    @media (max-width: 914.98px)
+        padding: 60px 0 40px
+
+    &__container
+        display: flex
+        gap: 80px
+        justify-content: space-between
+        position: relative
+        flex-wrap: wrap
+        @media (max-width: 914.98px)
+            gap: 30px
+
+    &__item
+        flex: 0 1 150px
+
+        &:nth-child(1)
+            flex: 1 1 200px
+
+        ul
+            li
+                margin-bottom: 18px
+                a
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 18px
+                    text-transform: capitalize
+                    color: #888B97
+                    transition: color 0.4s
+                    &:hover
+                        color: #10B981
+                        transition: color 0.4s
+
+    &__logo
+        margin-bottom: 30px
+
+    &__descr
+        max-width: 320px
+        margin-bottom: 20px
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 24px
+        color: #626687
+        opacity: 0.75
+
+    &__soc
+        display: flex
+        gap: 15px
+
+    &__title
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        text-transform: capitalize
+        color: #0E1735
+        margin-bottom: 24px

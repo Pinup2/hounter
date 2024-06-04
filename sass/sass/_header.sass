@@ -1,0 +1,180 @@
+/* ======================================header */
+.header
+    position: absolute
+    top: 40px
+    left: 50%
+    z-index: 99
+    width: 100%
+    transform: translateX(-50%)
+    padding: 5px 0
+    @media (max-width: 1079.98px)
+        top: 15px
+        position: fixed
+        background: #fff
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 65px
+        position: relative
+        @media (max-width: 745.98px)
+            justify-content: flex-start
+        @media (max-width: 732.98px)
+            gap: 5px
+
+    &__logo
+        position: relative
+        z-index: 6
+
+        img
+
+    &__menu
+        flex: 1 1 100%
+        display: flex
+        justify-content: flex-end
+        @media (max-width: 745.98px)
+            flex: 0 1 20px
+
+    &__btn
+        width: 107px
+        background: #D1FAE5
+        border-radius: 32px
+        font-style: normal
+        font-weight: 600
+        font-size: 14px
+        line-height: 22px
+        color: #047857
+        white-space: nowrap
+        padding: 12px 24px
+        transition: all 0.5s
+        position: relative
+        z-index: 6
+        &:hover
+            transition: all 0.5s
+            background: #fff
+            color: #D1FAE5
+
+.menu
+    display: flex
+    column-gap: 24px
+    row-gap: 8px
+    flex-wrap: wrap
+    transition: all 0.5s
+
+    @media (max-width: 745.98px)
+        flex-direction: column
+        position: fixed
+        top: 66px
+        left: 0
+        background: #fff
+        width: 100vw
+        height: 100vh
+        padding: 100px 60px
+        border-radius: 24px
+        border: 3px solid #10B981
+        overflow: auto
+        transform: translateX(-100%)
+
+    &__item
+        position: relative
+
+        img
+            position: absolute
+            right: 2%
+            top: 50%
+            transform: translateY(-50%)
+            padding: 10px
+
+        &:hover .menu__sub-menu
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+            transition: all 0.5s
+
+    &__link
+        background: rgba(255, 255, 255, 0.1)
+        border: 1px solid rgba(255, 255, 255, 1)
+        border-radius: 32px
+        font-style: normal
+        font-weight: 600
+        font-size: 14px
+        line-height: 18px
+        text-transform: capitalize
+        color: #fff
+        padding: 8px 16px
+        white-space: nowrap
+        transition: all 0.5s
+        display: flex
+        gap: 10px
+        align-items: center
+        &_pr25px
+
+            padding-right: 25px
+
+        &:hover
+            transition: all 0.5s
+            background: #D1FAE5
+
+        @media (max-width: 1079.98px)
+            color: #10B981
+            background: rgba(255, 255, 255, 0.5)
+        @media (max-width: 745.98px)
+            background: #10B981
+            color: #fff
+            justify-content: space-between
+
+    &__sub-menu
+        background: #10B981
+        padding: 30px
+        border-radius: 32px
+        position: absolute
+        top: 36px
+        left: -30px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(100px)
+        transition: all 0.5s
+        @media (max-width: 745.98px)
+            left: 0
+            width: 100%
+            top: 56px
+
+        li
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+
+            a
+                width: 100%
+                display: block
+
+.menu_active
+    transform: translateX(0)
+    transition: all 0.5s
+
+.humburger
+    display: none
+    position: fixed
+    top: 20px
+    right: 8px
+    span
+        width: 40px
+        height: 3px
+        background: #10B981
+        display: block
+        margin-bottom: 5px
+        transition: all 0.4s
+
+    @media (max-width: 745.98px)
+        display: block
+
+.humburger_active
+    span
+        background: #F59E0B
+        &:nth-child(1)
+            transform: translateX(5px)
+            transition: all 0.4s
+        &:nth-child(3)
+            transform: translateX(-5px)
+            transition: all 0.9s
