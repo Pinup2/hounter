@@ -1,0 +1,70 @@
+.join-section
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #f9f9f9 // Example background color
+
+  .container
+    display: flex
+    justify-content: space-between
+    padding: 20px
+
+    .join-text, .join-form
+      flex: 1
+
+    .join-text
+      margin-right: 20px
+
+      h2
+        color: #333
+
+      p
+        color: #666
+
+    .join-form
+      form
+        display: flex
+        flex-direction: column
+
+        input[type="text"],
+        select,
+        textarea
+          margin-bottom: 10px
+          padding: 10px
+          border: 1px solid #ccc
+          border-radius: 5px
+
+        .checkbox-container
+          position: relative
+          padding-left: 35px
+          margin-bottom: 10px
+          cursor: pointer
+          font-size: 14px
+
+          input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+
+          .checkmark
+            position: absolute
+            top: 0
+            left: 0
+            height: 20px
+            width: 20px
+            background-color: #eee
+            border-radius: 5px
+
+          input:checked ~ .checkmark
+            background-color: #2196F3
+
+        button
+          padding: 10px 20px
+          background-color: #4CAF50
+          color: white
+          border: none
+          border-radius: 5px
+          cursor: pointer
+
+          &:hover
+            background-color: #45a049

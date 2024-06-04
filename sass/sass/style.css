@@ -481,6 +481,84 @@ button {
   margin-bottom: 24px;
 }
 
+.join-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+.join-section .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.join-section .container .join-text,
+.join-section .container .join-form {
+  flex: 1;
+}
+.join-section .container .join-text {
+  margin-right: 20px;
+}
+.join-section .container .join-text h2 {
+  color: #333;
+}
+.join-section .container .join-text p {
+  color: #666;
+}
+.join-section .container .join-form form {
+  display: flex;
+  flex-direction: column;
+}
+.join-section .container .join-form form input[type="text"],
+.join-section .container .join-form form select,
+.join-section .container .join-form form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.join-section .container .join-form form .checkbox-container {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.join-section .container .join-form form .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.join-section .container .join-form form .checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.join-section
+  .container
+  .join-form
+  form
+  .checkbox-container
+  input:checked
+  ~ .checkmark {
+  background-color: #2196f3;
+}
+.join-section .container .join-form form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.join-section .container .join-form form button:hover {
+  background-color: #45a049;
+}
+
 .main-section {
   min-height: 720px;
   position: relative;
@@ -1617,44 +1695,8 @@ button {
   top: 80%;
   left: 18%;
 }
-.cookie-consent {
-  position: fixed;
-  left: 50%;
-  bottom: 13px;
-  transform: translateX(-50%);
-  width: 80%;
-  max-width: 1140px;
-  background-color: #dff0d8;
-  color: #333;
-  text-align: center;
-  padding: 10px 30px;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px 20px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
 
-.cookie-consent svg {
-  margin-right: 15px; /* Space between the icon and text */
-}
-
-.cookie-consent p {
-  margin: 0;
-  flex-grow: 1;
-}
-
-.cookie-consent button {
-  border: none;
-  background-color: transparent;
-  color: #333;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0 10px;
-}
 /* form */
-
 .container {
   width: 80%;
   max-width: 1000px;
@@ -1662,20 +1704,10 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  margin: auto;
-  padding: 20px;
-}
-.join-content {
   display: flex;
-  align-content: center;
+  flex-direction: row; /* Ensures side-by-side layout */
 }
-.join-form {
-  flex: 1 1;
-}
-.join-text {
-  flex: 1;
-  text-align: center;
-}
+
 /* Styling for the Text Section */
 .text-section {
   width: 50%; /* Half of the container */
