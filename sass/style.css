@@ -1656,95 +1656,132 @@ button {
 /* form */
 
 .container {
-  width: 80%;
-  max-width: 1000px;
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: auto;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 .join-content {
   display: flex;
-  align-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 25px;
+}
+
+/* Section Styling */
+.join-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.join-text {
+  padding: 30px;
+  text-align: center;
+  width: 45%; /* Adjust based on your layout preference */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.join-text img {
+  width: 261px;
+  height: 206px;
+  align-self: center;
+  display: flex;
 }
 .join-form {
-  flex: 1 1;
-}
-.join-text {
-  flex: 1;
-  text-align: center;
-}
-/* Styling for the Text Section */
-.text-section {
-  width: 50%; /* Half of the container */
-  padding: 40px;
-  background-color: #ffffff; /* White background */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* Align text to the left */
-  border-right: 2px solid #e0e0e0; /* Separator */
+  width: 50%; /* Adjust based on your layout preference */
+  padding: 30px;
+  background: #fff; /* Ensures the form background is white */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
 }
 
-/* Styling for the Form Section */
-.form-section {
-  width: 50%; /* Half of the container */
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Typography within Text Section */
-.text-section h1,
-.text-section p {
+/* Text Styles */
+h2 {
+  font-size: 24px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-/* Input, Select and Textarea Styling */
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Form Element Styling */
+label {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+  display: block;
+}
+
 input[type="text"],
 select,
 textarea {
-  width: 100%; /* Full width of the form section */
+  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Button Styling */
-button {
-  padding: 10px 20px;
-  background-color: #4caf50; /* Green background for the button */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+textarea {
+  height: 120px; /* Set the height of the textarea */
 }
 
-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+/* Checkbox Styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
 }
 
-/* Media Queries for Responsive Adjustments */
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  position: relative;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stack on small screens */
-    width: 90%; /* Adjust width for smaller screens */
+  .join-section {
+    flex-direction: column;
   }
 
-  .text-section,
-  .form-section {
-    width: 100%; /* Full width for each section on small screens */
-    border-right: none;
-    padding: 20px;
-  }
-
-  .text-section {
-    border-bottom: 2px solid #e0e0e0; /* Add bottom border for separation on small screens */
+  .join-text,
+  .join-form {
+    width: 100%;
   }
 }
 

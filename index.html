@@ -1033,7 +1033,7 @@
               What Our User Say About Us
             </h2>
 
-            <a href="#" id="loadMore" class="artikel__btn">More Artikel</a>
+            <a href="#" id="loadMore" class="artikel__btn">More Article</a>
 
             <div class="artikel-wrapper">
               <div class="artikel-wrapper__item">
@@ -1188,26 +1188,33 @@
               </div>
               <div class="join-form">
                 <form id="contactForm">
+                  <label for="name">Name</label>
                   <input
                     type="text"
                     name="name"
+                    id="name"
                     placeholder="Your name"
                     required
                   />
+                  <label for="surname">Surname</label>
                   <input
                     type="text"
                     name="surname"
+                    id="surname"
                     placeholder="Your Surname"
                     required
                   />
-                  <select name="education" required>
+                  <label for="education">Education</label>
+                  <select name="education" id="education" required>
                     <option value="" disabled selected>Select One</option>
                     <option value="high_school">High School</option>
                     <option value="bachelor">Bachelor's Degree</option>
                     <option value="master">Master's Degree</option>
                   </select>
+                  <label for="message">Message</label>
                   <textarea
                     name="message"
+                    id="message"
                     placeholder="Message"
                     maxlength="500"
                   ></textarea>
@@ -1216,7 +1223,6 @@
                     I give consent to the processing of my personal data given
                     in the contact form above under the terms and conditions of
                     Grid Dynamics Privacy Policy.
-                    <span class="checkmark"></span>
                   </label>
                 </form>
               </div>
